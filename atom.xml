@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://MuxinTrans.github.io</id>
+    <title>Muxin❤</title>
+    <updated>2021-01-09T12:37:13.961Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://MuxinTrans.github.io"/>
+    <link rel="self" href="https://MuxinTrans.github.io/atom.xml"/>
+    <subtitle>晚风吻尽荷花叶</subtitle>
+    <logo>https://MuxinTrans.github.io/images/avatar.png</logo>
+    <icon>https://MuxinTrans.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2021, Muxin❤</rights>
+    <entry>
+        <title type="html"><![CDATA[FPGA(1) | DDS信号发生平台]]></title>
+        <id>https://MuxinTrans.github.io/post/fpga1-or-dds-xin-hao-fa-sheng-ping-tai/</id>
+        <link href="https://MuxinTrans.github.io/post/fpga1-or-dds-xin-hao-fa-sheng-ping-tai/">
+        </link>
+        <updated>2021-01-09T12:01:46.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Verilog语法及一些代码分析【总】]]></title>
+        <id>https://MuxinTrans.github.io/post/verilog-yu-fa-ji-yi-xie-dai-ma-fen-xi-zong/</id>
+        <link href="https://MuxinTrans.github.io/post/verilog-yu-fa-ji-yi-xie-dai-ma-fen-xi-zong/">
+        </link>
+        <updated>2021-01-09T11:55:36.000Z</updated>
+        <summary type="html"><![CDATA[<p>一、DDS信号发生器<br>
+知识点：sin信号的产生；各种调制信号产生的原理；定点数的计算；有符号数的四则运算</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一、DDS信号发生器<br>
+知识点：sin信号的产生；各种调制信号产生的原理；定点数的计算；有符号数的四则运算</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SignalTap的使用]]></title>
+        <id>https://MuxinTrans.github.io/post/signaltap-de-shi-yong/</id>
+        <link href="https://MuxinTrans.github.io/post/signaltap-de-shi-yong/">
+        </link>
+        <updated>2021-01-09T02:27:03.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用Quartus和NIOS编译时遇到的一些问题的整理和汇总]]></title>
+        <id>https://MuxinTrans.github.io/post/shi-yong-quartus-he-nios-bian-yi-shi-yu-dao-de-yi-xie-wen-ti-de-zheng-li-he-hui-zong/</id>
+        <link href="https://MuxinTrans.github.io/post/shi-yong-quartus-he-nios-bian-yi-shi-yu-dao-de-yi-xie-wen-ti-de-zheng-li-he-hui-zong/">
+        </link>
+        <updated>2021-01-08T03:24:03.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Au教程 | 去掉人声做伴奏]]></title>
+        <id>https://MuxinTrans.github.io/post/au-jiao-cheng-or-qu-diao-ren-sheng-zuo-ban-zou/</id>
+        <link href="https://MuxinTrans.github.io/post/au-jiao-cheng-or-qu-diao-ren-sheng-zuo-ban-zou/">
+        </link>
+        <updated>2021-01-06T15:02:08.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://MuxinTrans.github.io/post/hello-gridea/</id>
+        <link href="https://MuxinTrans.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></content>
+    </entry>
+</feed>

@@ -1,0 +1,220 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>使用Quartus和NIOS编译时遇到的一些问题的整理和汇总 | Muxin❤</title>
+<link rel="shortcut icon" href="https://MuxinTrans.github.io/favicon.ico?v=1610195829039">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://MuxinTrans.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="使用Quartus和NIOS编译时遇到的一些问题的整理和汇总 | Muxin❤ - Atom Feed" href="https://MuxinTrans.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="一、Quartus篇
+
+二、NIOS篇
+1、在NIOS中找得到对某变量的宏定义/定义，但是报错找不到。
+【原因分析】：
+【解决方法】：右键工程，【index】-【rebuild】即可。
+2、NIOS编译时，莫名其妙就出现“make: ***..." />
+    <meta name="keywords" content="FPGA_Quartus的使用" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://MuxinTrans.github.io">
+  <img class="avatar" src="https://MuxinTrans.github.io/images/avatar.png?v=1610195829039" alt="">
+  </a>
+  <h1 class="site-title">
+    Muxin❤
+  </h1>
+  <p class="site-description">
+    晚风吻尽荷花叶
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              使用Quartus和NIOS编译时遇到的一些问题的整理和汇总
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-01-08
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://MuxinTrans.github.io/tag/quartus/" class="post-tag">
+                  # FPGA_Quartus的使用
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>一、Quartus篇</p>
+<!--二、NIOS篇 -->
+<p>二、NIOS篇<br>
+1、在NIOS中找得到对某变量的宏定义/定义，但是报错找不到。<br>
+【原因分析】：<br>
+【解决方法】：右键工程，【index】-【rebuild】即可。</p>
+<p>2、NIOS编译时，莫名其妙就出现“make: *** No rule to make target ”报错。<br>
+【原因分析】：工程更改了路径或更改了其中的文件夹名称后，之前生成的.o.d文件在再次编译时不会重新编译（其实我也不太懂这句话在说啥）<br>
+【解决方法】：（重点是这个）删除编译后生成的obj文件夹，再重新编译即可。若不放心，可在删除前对该文件进行备份。</p>
+<p>3、NIOS中，在用define对变量进行宏定义后，出现“error: expected '}' before numeric constant ”编译错误。<br>
+【原因分析】：同一个变量多次宏定义。<br>
+【解决方法】：关闭多余的宏定义，仅保留一个。若要跨文件使用该宏定义变量，嗯，因为我C语言没学好，所以暂时不知道如何跨文件调用宏定义变量，故而选择用“extern”声明该变量，实现跨文件调用该变量。</p>
+<p>4、NIOS中，在函数定义处出现了“conflicting types for xxx”编译错误。<br>
+【原因分析】：函数使用的位置位于声明之前，或未声明函数原型就使用函数（即未在头部声明函数或声明的位置位于函数调用之后）。<br>
+【解决方法】：将函数声明放到调用位置之前。<br>
+*c语言中，不经声明就定义函数，只能在头部定义函数！（C语言是真的没学好2333）</p>
+<p>5、NIOS中，在用extern声明变量后，出现“undefined reference to xxx”的错误。<br>
+【原因分析】：<br>
+【解决方法】：在相应文件的头文件（.h）中声明变量。<br>
+*在.c文件中用'extern'声明变量，在头文件.h中只需声明变量类型。</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://MuxinTrans.github.io/post/au-jiao-cheng-or-qu-diao-ren-sheng-zuo-ban-zou/">
+              <h3 class="post-title">
+                Au教程 | 去掉人声做伴奏
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://MuxinTrans.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
